@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fluex404.myservice">
+    package="com.fluex404.foregroundservice">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <application
         android:allowBackup="true"
@@ -10,16 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".service.MyBoundService"
+            android:name=".ForegroundService"
             android:enabled="true"
             android:exported="true"></service>
-        <service
-            android:name=".service.MyIntentService"
-            android:exported="false" />
-        <service
-            android:name=".service.MyService"
-            android:enabled="true"
-            android:exported="true" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
